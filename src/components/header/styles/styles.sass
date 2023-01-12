@@ -1,14 +1,11 @@
 @use '../../../styles/variables'
 @use '../../../styles/mixins'    
 
-@keyframes border
-    0%
-        border: none
-    100%
-        border: white 2px solid    
 .header
+    background-color: variables.$header-color
     color: variables.$text-color
     @include mixins.flex-center
+    height: 100px
     justify-content: space-between
     &-logo
         font-size: 60px
@@ -16,8 +13,37 @@
         position: relative
         padding: 10px
         cursor: pointer
-        border-radius: 90px
+        background-color: variables.$header-color
+        padding-top: 20px
+        z-index: 1
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left:50%
+            transform: translate(-50%, -50%)
+            width: 0
+            height: 100%
+            transition: .3s ease
+            z-index: -1
+            background-color: variables.$secondary-color
+            border-radius: 90px
         &:hover
-            animation-name: border
+            &::before
+                width:100%
+    &-nav
+        margin-right: 20px
+        background-color: variables.$header-color
+        a
+            text-decoration: none
+            margin: 5px
+            color: variables.$text-color
+            padding: 10px
+            border-radius: 20px
+            &:hover
+                background-color: variables.$secondary-color
+    @include mixins.mobile
+        justify-content: center
+        &-nav
+            display: none
         
-             
