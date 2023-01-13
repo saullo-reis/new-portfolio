@@ -3,23 +3,48 @@
 
 .about
     display: flex
-    align-items: center
     background-image: linear-gradient( variables.$header-color, variables.$primary-color)
     justify-content: center
-    padding: 100px
+    align-items: flex-start
+    padding: 100px 0 100px 0
+    @include mixins.mobile
+        flex-direction: column
+        align-items: center
+    &-card
+        border-right: solid 1px gray
+        @include mixins.flex-center
+        flex-direction: column
+        justify-content: flex-start
+        div
+            @include mixins.flex-center
+            flex-direction: column
+            margin-top: 20px
+        @include mixins.mobile
+            border: none
+            height: 500px
+            border-bottom: solid 1px gray
+            margin-bottom: 10px
+            
     &-image
-        width:30%
-        height: 500px
-        background-image: url('../../../../assets/img/93871055.jpg')
-        background-repeat: no-repeat
+        width:300px
+        margin-bottom: 20px
+        background-repeat: no-repeat 
         background-size: cover
+        margin-right: 20px 
+        border-radius: 10px
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+        @include mixins.mobile
+            margin-right: 0 
     &-container
         width: 50%
-        height: 500px
         display: flex
+        @include mixins.mobile
+            width: 80%
         align-items: center
+        margin-left: 10px
         flex-direction: column
         .buttons
+            margin-bottom: 20px
             button
                 cursor: pointer
                 background-color: variables.$primary-color
@@ -29,15 +54,16 @@
         .about-infos
             height: 100%
             .about-infos-me
-                margin: 30px
+                margin-top: 20px
                 @include mixins.flex-center
                 flex-direction: column
                 justify-content: normal
                 height: 100%
+                width: 100%
                 p
                     text-align: center
             .about-infos-redes
-                margin-top: 100px
+                margin-top: 120px
                 @include mixins.flex-center
                 flex-direction: column
                 a
@@ -46,4 +72,55 @@
                     svg
                         &:hover
                             transform: scale(1.1,1.1)
-            
+.hardskills
+    display: flex
+    flex-direction: column
+    align-items: center
+    .hardskills-container
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        li
+           background-color: variables.$secondary-color
+           list-style: none
+           width: 200px
+           margin: 10px
+           padding: 10px
+           display: flex
+           align-items: center
+           justify-content: center
+           flex-direction: column 
+           text-align: center
+           border-radius: 20px
+           box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+           h3
+            svg
+                font-size: 50px
+.softskills
+    display: flex
+    flex-direction: column
+    align-items: center
+    flex-direction: column
+    .softskills-container
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        li
+           background-color: variables.$secondary-color
+           list-style: none
+           width: 200px
+           margin: 10px
+           height: 100px
+           padding: 10px
+           display: flex
+           align-items: center
+           justify-content: center
+           flex-direction: column 
+           text-align: center
+           border-radius: 20px
+           box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)                
+        
+        
+
+        
+        
