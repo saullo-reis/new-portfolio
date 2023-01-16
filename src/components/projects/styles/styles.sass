@@ -1,14 +1,68 @@
 @use '../../../styles/variables'
 @use '../../../styles/mixins'
     
-section
+.projects
+    padding: 80px 0 80px 0
     background-color: variables.$primary-color
     @include mixins.flex-center
+    flex-direction: column
+    border-bottom: gray 1px solid
+    .button-projects
+        padding: 10px
+        border-radius: 10px
+        border: none
+        margin-left: 10px
+        background-color: variables.$secondary-color
+        cursor: pointer
+        &:hover
+            transform: scale(1.1)
+    h1
+        font-size: 60px
+        margin-top: 30px
     ul
         display: flex
-        flex-flox:row wrap
         align-items: center
         justify-content: center
-        div
-            img
-                width: 50%
+        flex-direction: column
+        li
+            list-style: none
+            @include mixins.flex-center
+            flex-direction: column
+            background-color: variables.$secondary-color
+            margin: 40px 100px 40px 100px
+            padding-bottom: 20px
+            border-radius: 30px
+            h3
+                margin-top: 10px
+            .image
+                width: 440px
+                border-top-left-radius: 30px
+                @include mixins.mobile460
+                    width: 280px
+                    height: 120px
+                height: 210px
+            .poke-img
+                @include mixins.bg-img('poke-gif.gif')
+            .tmdb-img
+                @include mixins.bg-img('tmdb-3.gif')
+            .github-img
+                @include mixins.bg-img('github api.gif')
+            .calculadora-img
+                @include mixins.bg-img('calculadoragif.gif')
+            .galleria-img
+                @include mixins.bg-img('galleriagif.gif')
+            .codecafe-img
+                @include mixins.bg-img('code-cafe.gif')
+            .lojarpg-img
+                @include mixins.bg-img('lojarpggif1.gif')
+            .pizzaria-img
+                @include mixins.bg-img('pizza-gif.gif')
+        .container
+            a
+                text-decoration: none
+            max-width: 1400px
+            width: 100%  
+            display: flex
+            flex-flow: row wrap
+            @include mixins.flex-center
+            

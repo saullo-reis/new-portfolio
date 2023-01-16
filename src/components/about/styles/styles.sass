@@ -3,6 +3,7 @@
 
 .about
     display: flex
+    border-bottom: gray 1px solid
     background-image: linear-gradient( variables.$header-color, variables.$primary-color)
     justify-content: center
     align-items: flex-start
@@ -11,7 +12,6 @@
         flex-direction: column
         align-items: center
     &-card
-        border-right: solid 1px gray
         @include mixins.flex-center
         flex-direction: column
         justify-content: flex-start
@@ -37,6 +37,7 @@
             margin-right: 0 
     &-container
         width: 50%
+        
         display: flex
         @include mixins.mobile
             width: 80%
@@ -66,6 +67,7 @@
                 margin-top: 120px
                 @include mixins.flex-center
                 flex-direction: column
+                
                 a
                     margin: 5px
                     font-size: 40px
@@ -84,6 +86,7 @@
            background-color: variables.$secondary-color
            list-style: none
            width: 200px
+           height: 203px
            margin: 10px
            padding: 10px
            display: flex

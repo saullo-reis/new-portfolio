@@ -5,6 +5,13 @@
 @mixin mobile
     @media (max-width: 1260px)
         @content
-@mixin mobile420
-    @media (max-width: 425px) 
+@mixin mobile460
+    @media (max-width: 460px) 
         @content
+@mixin bg-img($img)
+    background-image: url('../assets/img/#{$img}')
+    background-size: 100%
+    background-position: center
+    background-repeat: no-repeat
+    &:hover
+        background-size: 110%
