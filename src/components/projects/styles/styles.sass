@@ -1,6 +1,6 @@
 @use '../../../styles/variables'
 @use '../../../styles/mixins'
-    
+
 .projects
     padding: 80px 0 80px 0
     background-color: variables.$primary-color
@@ -58,11 +58,11 @@
             .pizzaria-img
                 @include mixins.bg-img('pizza-gif.gif')
         .container
+            flex-flow: row wrap
             a
                 text-decoration: none
-            max-width: 1400px
-            width: 100%  
-            display: flex
-            flex-flow: row wrap
+                max-width: 1400px
+                width: 100%
+                display: flex
+                flex-flow: row wrap
             @include mixins.flex-center
-            

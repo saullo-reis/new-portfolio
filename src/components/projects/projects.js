@@ -21,7 +21,7 @@ export const Projects = () => {
         return 'none'
     }
     return (
-        <section className='projects'>
+        <section className='projects' id='projects'>
             <h1>Projetos</h1>
             <ul>
                 <div className='container'>

@@ -16,7 +16,7 @@ export const About = () => {
     }
     console.log(page)
     return (
-        <section className="about">
+        <section className="about" id='about'>
             <div className='about-card'>
                 <img className='about-image' src={image}></img>
                 <div>

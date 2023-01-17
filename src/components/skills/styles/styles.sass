@@ -1,0 +1,29 @@
+@use '../../../styles/variables'
+@use '../../../styles/mixins'  
+.skill
+    padding:90px 0 90px 0
+    border-bottom: gray 1px solid
+    h1
+        font-size: 60px
+    @include mixins.mobile460
+        h1
+            font-size: 50px
+    @include mixins.flex-center
+    flex-direction: column
+    .skill-button
+        .button
+            margin: 10px
+            padding: 10px
+            border: none
+            background-color: variables.$header-color 
+            cursor: pointer 
+    .container-text
+        margin: 30px 30px 30px 30px
+        max-width: 1000px
+        padding: 80px 30px 80px 30px
+        text-align: center
+        background-color: variables.$secondary-color
+        h3
+            color: black
+    
+
