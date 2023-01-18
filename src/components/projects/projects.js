@@ -44,9 +44,9 @@ export const Projects = () => {
                     </li>
 
                     <li>
-                        <a href="https://saullo-reis.github.io/calculadora/" target='_blank'>
-                            <div className='image calculadora-img'></div></a>
-                        <h3>Projeto Calculadora</h3>
+                        <a href="https://loja-pxtd7lhbg-saullo-reis.vercel.app/" target='_blank'>
+                            <div className='image lojarpg-img'></div></a>
+                        <h3>Projeto Loja-rpg</h3>
                     </li>
 
                 </div>
@@ -66,9 +66,9 @@ export const Projects = () => {
                     </li>
 
                     <li>
-                        <a href="https://loja-pxtd7lhbg-saullo-reis.vercel.app/" target='_blank'>
-                            <div className='image lojarpg-img'></div></a>
-                        <h3>Projeto Loja-rpg</h3>
+                        <a href="https://saullo-reis.github.io/calculadora/" target='_blank'>
+                            <div className='image calculadora-img'></div></a>
+                        <h3>Projeto Calculadora</h3>
                     </li>
 
                     <li>
