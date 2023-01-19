@@ -1,0 +1,12 @@
+@use '../../../styles/variables'
+@use '../../../styles/mixins'
+    
+.footer
+    background-color: variables.$neutro-color
+    @include mixins.flex-center
+    align-items: flex-end
+    height: 200px
+    &-text
+        color: variables.$primary-color
+        span
+            color: variables.$primary-color
