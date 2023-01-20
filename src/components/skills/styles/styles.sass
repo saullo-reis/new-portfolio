@@ -1,6 +1,7 @@
 @use '../../../styles/variables'
 @use '../../../styles/mixins'  
 .skill
+    z-index: 1
     padding:90px 0 90px 0
     border-bottom: gray 1px solid
     h1
@@ -12,12 +13,35 @@
     flex-direction: column
     .skill-button
         border-bottom: solid 1px gray
+        display: flex
+        flex-direction: column
+        align-items: center
+        flex-flow: row wrap
+        justify-content: center
         button
             margin: 10px
             padding: 10px
             border: none
             background-color: variables.$neutro-color
-            cursor: pointer 
+            cursor: pointer
+            position: relative
+            z-index: 2
+            overflow: hidden
+            &::before
+                content: ''
+                width:400%
+                
+                top: 50%
+                left:50%
+                transform: translate(-50%, -50%) rotate(45deg) 
+                background-color: variables.$secondary-color
+                height: 0
+                z-index: -11
+                transition: .6s ease
+                position: absolute
+            &:hover
+                &::before
+                    height: 570%
             
     .container-text
         margin: 30px 30px 30px 30px

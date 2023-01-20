@@ -44,14 +44,14 @@ export const Skills = () => {
             {box === 'soft' && <div className="skill-button">
                 {softskills.map((element, index) => {
                     return (
-                        <button className="button" style={{ backgroundColor: activeSoft[index] === 1 && '#4169E1' }} onClick={() => { handleClickSoft(index) }} key={index}>{element}</button>
+                        <button className="btn-skill" style={{ backgroundColor: activeSoft[index] === 1 && '#4169E1' }} onClick={() => { handleClickSoft(index) }} key={index}>{element}</button>
                     )
                 })}
             </div>}
             {box === 'hard' && <div className="skill-button">
                 {hardskills.map((element, index) => {
                     return (
-                        <button className="button" style={{ backgroundColor: activeHard[index] === 1 && '#4169E1' }} onClick={() => { handleClickHard(index) }} key={index}>{element}</button>
+                        <button className="btn-skill" style={{ backgroundColor: activeHard[index] === 1 && '#4169E1' }} onClick={() => { handleClickHard(index) }} key={index}>{element}</button>
                     )
                 })}
             </div>}

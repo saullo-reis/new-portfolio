@@ -45,12 +45,30 @@
         flex-direction: column
         .buttons
             margin-bottom: 20px
-            button
+            .btn-menu
                 cursor: pointer
-                background-color: variables.$primary-color
                 padding: 10px
+                background-color: variables.$primary-color
                 border: none
                 margin: 2px
+                z-index: 3
+                overflow: hidden
+                position: relative
+                &::before
+                    content: ''
+                    position: absolute
+                    top:50%
+                    left:50%
+                    transform: translate(-50%, -50%) rotate(45deg)
+
+                    width:110%
+                    height:0
+                    background-color: variables.$secondary-color
+                    z-index: -1
+                    transition: 1.7s ease
+                &:hover
+                    &::before
+                        height: 350%
         .about-infos
             height: 100%
             .about-infos-me

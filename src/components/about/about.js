@@ -32,13 +32,13 @@ export const About = () => {
             </div>
             <div className="about-container">
                 <div className="buttons">
-                    <button style={{ backgroundColor: changeColor('sobre') }}  onClick={() => {
+                    <button className='btn-menu' style={{ backgroundColor: changeColor('sobre') }}  onClick={() => {
                         handleClick('sobre');
                     }}>Sobre</button>
-                    <button style={{ backgroundColor: changeColor('hard') }}  onClick={() => {
+                    <button className='btn-menu' style={{ backgroundColor: changeColor('hard') }}  onClick={() => {
                         handleClick('hard');
                     }}>Hard Skills</button>
-                    <button style={{backgroundColor: changeColor('soft')}} onClick={() => {
+                    <button className='btn-menu' style={{backgroundColor: changeColor('soft')}} onClick={() => {
                         handleClick('soft');
                     }}>Soft Skills</button>
                 </div>
